@@ -12,7 +12,6 @@ const app = express();
 
 app.use(express.json());
 
-// Middleware for handling CORS POLICY
 app.use(
   cors({
     origin: "http://localhost:5173",
