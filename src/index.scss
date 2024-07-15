@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #121215;
+  letter-spacing: 1px;
+}
+.container {
+  padding: 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h3 {
+  font-weight: bold;
+}
+.header {
+  margin-bottom: 20px;
+}
+.header > div {
+  color: white;
+}
+
+.header h1 {
+  font-weight: bold;
+}
+
+.icon_user {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 3px;
+}
+.inner-form {
+  padding: 22px;
+  padding-top: 40px;
+  border-radius: 7px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #7352e8;
+}
+label {
+  width: 100%;
+  padding: 3px;
+  font-size: 12px;
+  color: #898acc;
+  font-weight: 300;
+  text-transform: capitalize;
+  margin-bottom: -11px;
+}
+.form_title {
+  position: absolute;
+  top: 0;
+  padding: 7px;
+  width: 100%;
+  text-align: center;
+  background-image: linear-gradient(45deg, #704bec, #898acc);
+  font-weight: bold;
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+input {
+  padding: 9px 10px;
+  border-radius: 14px;
+  background: #2f2d36;
+  font-weight: 300;
+  font-size: 16px;
+  color: white;
+  color-scheme: dark;
+}
+input:focus {
+  border: none;
+  outline: none;
+  border: 1px solid white;
+}
+.save {
+  padding: 6px 26px;
+  border-radius: 20px;
+  background-image: linear-gradient(45deg, #704bec, #898acc);
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.none {
+  display: none;
+}
+p.req_notif {
+  font-size: 14px;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.add_input {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+input svg {
+  fill: white;
+}
+.add_input:focus {
+  border: 1px solid white;
+  box-shadow: none;
+}
+
+.add_form {
+  z-index: 10000;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+}
+:-moz-placeholder {
+  color: white !important;
+  opacity: 1;
+}
+::-moz-placeholder {
+  color: white !important;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: white !important;
+}
+::-ms-input-placeholder {
+  color: white !important;
+}
+
+::placeholder {
+  color: white !important;
+}
+.todo {
+  border-radius: 15px;
+  color: white;
+  padding: 15px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .todo {
+    width: calc(100% - 260px);
+  }
+}
+g {
+  fill: white;
+}
+.item {
+  background: #2f2d36;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  margin-top: 15px;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+}
+span.comp_icon {
+  color: #ffffff;
+  width: 17px;
+  height: 17px;
+  /* background: #7e7e7e; */
+  padding: 0;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 50%;
+}
+p.text_content {
+  margin-left: 5px;
+}
+.controlls {
+  height: 15px;
+  cursor: pointer;
+}
+.controlls svg {
+  fill: #7e7e7e;
+}
+.controlls svg:hover {
+  fill: rgb(255, 0, 0);
+}
+/* loader animtion */
+.loader_svg {
+  width: 3.25em;
+  transform-origin: center;
+  animation: rotate4 2s linear infinite;
+}
+
+.loader_circle {
+  fill: none;
+  stroke: hsl(214, 97%, 59%);
+  stroke-width: 2;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash4 {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}
+li {
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: 500;
+  cursor: pointer;
+}
+li.active {
+  background: #2f2d36;
+}
+li:hover {
+  background: #2f2d36;
+}
+.todo {
+  &::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+.brd_red {
+  /* border: 1px solid rgb(255 108 108); */
+  background-color: rgb(255 108 108);
+}
+.brd_green {
+  /* border: 1px solid rgb(132, 253, 95); */
+  background-color: rgb(132, 253, 95);
+}
